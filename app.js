@@ -6,8 +6,8 @@ function $(id){ return document.getElementById(id); }
 
 async function loadBrain(){
   const res = await fetch('/data/nova_brain.json'); // correct public path
-  if(!res.ok){ 
-    document.body.innerHTML = '<div style="padding:24px;font-family:system-ui">Error loading Nova data. Check /public/data/nova_brain.json</div>';
+  if(!res.ok){
+    document.body.innerHTML = '<div style="padding:24px;font-family:system-ui">Error loading Nova data at /data/nova_brain.json</div>';
     return;
   }
   BRAIN = await res.json();
@@ -40,7 +40,7 @@ function scorePositions(){
     selected.forEach(tid => { sum += (w[tid] || 0); });
     const score = selected.length ? (sum / selected.length) : 0;
     return { ...p, score: +(score.toFixed(3)) };
-  }).filter(r => r.score >= 0.18) // threshold
+  }).filter(r => r.score >= 0.18)
     .sort((a,b) => b.score - a.score)
     .slice(0, 24);
   return scored;
