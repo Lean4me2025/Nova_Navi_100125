@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NOVA + NAVI</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- PayHip script (included once) -->
+  <script type="text/javascript" src="https://payhip.com/payhip.js"></script>
+</head>
+<body>
+  <header>
+    <h1>NOVA · Discover Your Purpose → NAVI · Put It Into Action</h1>
+  </header>
+  <div class="container">
+    <div class="card step active" id="step-welcome">
+      <h2>Welcome to Nova</h2>
+      <p>I’ll help you discover roles aligned with who you are. Select traits that feel true to you, then I’ll show your best‑fit occupations.</p>
+      <div class="actions">
+        <button id="startBtn">Start</button>
+      </div>
+    </div>
+
+    <div class="card step" id="step-traits">
+      <h2>Select Your Traits</h2>
+      <p>Tap 5–12 traits that describe you. You can always adjust later.</p>
+      <div id="traits" class="traits"></div>
+      <div class="actions" style="margin-top:12px;">
+        <button id="clearBtn">Clear Selections</button>
+        <button id="seeResultsBtn" disabled>See My Results</button>
+        <span id="traitCount" class="badge">0 selected</span>
+      </div>
+    </div>
+
+    <div class="card step" id="step-results">
+      <h2>Your Matches</h2>
+      <p>These occupations match your selected traits. Scores reflect alignment strength.</p>
+      <div class="actions">
+        <button id="backToTraitsBtn">Back</button>
+        <button id="goNaviBtn">Proceed to NAVI</button>
+      </div>
+      <div id="results" class="results" style="margin-top:12px;"></div>
+
+      <div class="cta card" style="margin-top:16px;">
+        <h3>How to know your Purpose (Book)</h3>
+        <p>Go deeper with the companion guide.</p>
+        <a href="https://payhip.com/b/N7Lvg" class="payhip-buy-button" data-theme="green" data-product="N7Lvg">Buy Now</a>
+      </div>
+    </div>
+
+    <div class="card step" id="step-navi">
+      <h2>Welcome to NAVI</h2>
+      <p>Choose your plan and get moving today.</p>
+      <div class="plans">
+        <div class="plan">
+          <h3>Starter</h3>
+          <p>Essentials to get started fast.</p>
+          <a href="https://payhip.com/b/GdfU7" class="payhip-buy-button" data-theme="green" data-product="GdfU7">Buy Now</a>
+        </div>
+        <div class="plan">
+          <h3>Pro</h3>
+          <p>Advanced tools & guidance.</p>
+          <a href="https://payhip.com/b/knC1Z" class="payhip-buy-button" data-theme="green" data-product="knC1Z">Buy Now</a>
+        </div>
+        <div class="plan">
+          <h3>Mastery</h3>
+          <p>Full suite & mastery coaching.</p>
+          <a href="https://payhip.com/b/re4Hy" class="payhip-buy-button" data-theme="green" data-product="re4Hy">Buy Now</a>
+        </div>
+      </div>
+      <div class="actions" style="margin-top:16px;">
+        <button id="backToResultsBtn">Back to Results</button>
+      </div>
+    </div>
+  </div>
+  <footer>© NOVA & NAVI</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
